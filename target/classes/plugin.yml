@@ -1,0 +1,8 @@
+name: ResistanceAmulet
+version: '1.1'
+main: com.ashkiano.resistanceamulet.ResistanceAmulet
+api-version: '1.16'
+author: AshKiano
+commands:
+  resistanceamulet:
+    description: Gives the player a resistance amulet
