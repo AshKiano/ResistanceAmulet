@@ -17,10 +17,12 @@ public class ResistanceAmuletCommand implements CommandExecutor {
 
     private final String commandPermission;
     private final Integer resistanceLevel;
+    private final String amuletName;
 
-    public ResistanceAmuletCommand(String commandPermission, Integer resistanceLevel) {
+    public ResistanceAmuletCommand(String commandPermission, Integer resistanceLevel, String amuletName) {
         this.commandPermission = commandPermission;
         this.resistanceLevel = resistanceLevel;
+        this.amuletName = amuletName;
     }
 
     @Override
@@ -40,7 +42,7 @@ public class ResistanceAmuletCommand implements CommandExecutor {
         ItemStack amulet = new ItemStack(Material.EMERALD);
 
         ItemMeta meta = amulet.getItemMeta();
-        meta.setDisplayName(ChatColor.GREEN + "Amulet of Resistance");
+        meta.setDisplayName(ChatColor.GREEN + amuletName);
 
         List<String> lore = new ArrayList<>();
         lore.add(ChatColor.GRAY + "This amulet provides resistance when held in the action bar.");
@@ -53,7 +55,7 @@ public class ResistanceAmuletCommand implements CommandExecutor {
 
         player.getInventory().addItem(amulet);
         ResistanceTask.checkResistance(player, resistanceLevel);
-        player.sendMessage(ChatColor.GREEN + "You have been given the Amulet of Resistance!");
+        player.sendMessage(ChatColor.GREEN + "You have been given the " + amuletName + "!");
 
         return true;
     }

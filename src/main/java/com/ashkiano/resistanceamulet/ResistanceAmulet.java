@@ -12,11 +12,11 @@ public class ResistanceAmulet extends JavaPlugin {
 
         String commandPermission = getConfig().getString("command-permission");
         int resistanceLevel = getConfig().getInt("resistance-level");
+        String amuletName = getConfig().getString("amulet-name");
 
         instance = this;
-        this.getCommand("resistanceamulet").setExecutor(new ResistanceAmuletCommand(commandPermission, resistanceLevel));
+        this.getCommand("resistanceamulet").setExecutor(new ResistanceAmuletCommand(commandPermission, resistanceLevel, amuletName));
 
-        // Registrace listeneru
         getServer().getPluginManager().registerEvents(new InventoryChangeListener(resistanceLevel), this);
 
         Metrics metrics = new Metrics(this, 19189);
@@ -30,4 +30,3 @@ public class ResistanceAmulet extends JavaPlugin {
         return instance;
     }
 }
-
