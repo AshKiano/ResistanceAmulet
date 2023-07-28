@@ -20,6 +20,8 @@ public class ResistanceAmulet extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new InventoryChangeListener(resistanceLevel), this);
 
         Metrics metrics = new Metrics(this, 19189);
+
+        System.out.println("Thank you for using the ResistanceAmulet plugin! If you enjoy using this plugin, please consider making a donation to support the development. You can donate at: https://paypal.me/josefvyskocil");
     }
 
     public void onDisable() {
