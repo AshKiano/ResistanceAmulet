@@ -21,7 +21,7 @@ public class ResistanceAmulet extends JavaPlugin {
 
         Metrics metrics = new Metrics(this, 19189);
 
-        this.getLogger().info("Thank you for using the ResistanceAmulet plugin! If you enjoy using this plugin, please consider making a donation to support the development. You can donate at: https://paypal.me/josefvyskocil");
+        this.getLogger().info("Thank you for using the ResistanceAmulet plugin! If you enjoy using this plugin, please consider making a donation to support the development. You can donate at: https://donate.ashkiano.com");
     }
 
     public void onDisable() {
